@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0737401D2999900D004F1FBF /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737401C2999900D004F1FBF /* Job.swift */; };
+		0737401F29999208004F1FBF /* JobsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737401E29999208004F1FBF /* JobsList.swift */; };
 		07DBC03B2996950A00B42394 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBC03A2996950A00B42394 /* AppDelegate.swift */; };
 		07DBC03D2996950A00B42394 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBC03C2996950A00B42394 /* SceneDelegate.swift */; };
 		07DBC03F2996950A00B42394 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBC03E2996950A00B42394 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0737401C2999900D004F1FBF /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		0737401E29999208004F1FBF /* JobsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsList.swift; sourceTree = "<group>"; };
 		07DBC0372996950A00B42394 /* JobFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DBC03A2996950A00B42394 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07DBC03C2996950A00B42394 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		07DBC05029969F1D00B42394 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0737401C2999900D004F1FBF /* Job.swift */,
+				0737401E29999208004F1FBF /* JobsList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 				07DBC03F2996950A00B42394 /* ViewController.swift in Sources */,
 				07DBC03B2996950A00B42394 /* AppDelegate.swift in Sources */,
 				07DBC03D2996950A00B42394 /* SceneDelegate.swift in Sources */,
+				0737401D2999900D004F1FBF /* Job.swift in Sources */,
+				0737401F29999208004F1FBF /* JobsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
