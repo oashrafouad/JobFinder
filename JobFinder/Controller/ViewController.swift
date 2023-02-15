@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("test")
     }
     
     @IBAction func registerButton(_ sender: UIButton) {
