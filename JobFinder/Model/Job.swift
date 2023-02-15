@@ -14,5 +14,6 @@ struct Job
     var title : String
     var description : String
     var technology : String
-    var link : URL
+    var company : String
+//    var link : URL
 }

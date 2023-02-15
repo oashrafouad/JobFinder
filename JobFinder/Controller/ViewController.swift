@@ -8,19 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
-    // Job object test initialize
-    var job = Job(title: "iOS", description: "This is an iOS job", technology: "Swift", link: URL(string: "https://apple.com/")!)
+    // Initialize an object of the struct to be able to call functions on it
+    var jobBrain = JobBrain()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func applyButton(_ sender: UIButton) {
-        // When pressing on the apply button, open the link in the job struct in a new browser window
-        UIApplication.shared.open(job.link)
-        
+    @IBAction func registerButton(_ sender: UIButton) {
     }
     
 }
