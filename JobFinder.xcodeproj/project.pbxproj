@@ -77,7 +77,6 @@
 		07DBC04E29969EF100B42394 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				07DBC0402996950A00B42394 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,6 +86,7 @@
 			children = (
 				07DBC03E2996950A00B42394 /* ViewController.swift */,
 				2003E5C0299E6F4400BE09B5 /* jobsTableVC.swift */,
+				07DBC0402996950A00B42394 /* Main.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

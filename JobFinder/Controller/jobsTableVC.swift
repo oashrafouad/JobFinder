@@ -8,7 +8,8 @@
 import UIKit
 
 class jobsTableVC: UITableViewController {
-
+    // Initialize an object of the struct to be able to call functions on it
+    var jobObjc = JobBrain()
     var males : [String] = ["Mohamed" , "Ahmed" , "Ali" , "Malek"]
     var females : [String] = ["Heba" , "Asmaa" , "Shimaa"]
     
@@ -21,67 +22,33 @@ class jobsTableVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //number of row = nu,ber of job's array elements
         
-        switch section {
-        case 0:
-            return males.count
-        case 1:
-            return females.count
-        default:
-            return 0
-        }
+        return jobObjc.jobsList.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 80
+        return 200
     }
 
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        switch section {
-        case 0:
-            return "Males"
-        case 1:
-            return "Females"
-        default:
-            return ""
+            return "Jobs"// we need to add (the targeted track of user as a returned value from struct) shuch as:
+        //ios developer jobs ...etc
         }
-        
-    }
     
-    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        
-        switch section {
-        case 0:
-            return "Males"
-        case 1:
-            return "Females"
-        default:
-            return ""
-        }
-        
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        switch indexPath.section {
-        case 0:
-            print(males[indexPath.row])
-            
-        case 1:
-            print(females[indexPath.row])
-        default:
-            print("")
-        }
-        
-    }
+    //function to make changes when select a cell from the table
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//
+//        print(jobObjc.jobsList[indexPath.row])
+//
+//    }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         
@@ -99,7 +66,7 @@ class jobsTableVC: UITableViewController {
         
         switch indexPath.section {
         case 0://we make the cell text label = the value of row index in the array
-            cell.textLabel?.text = males[indexPath.row]
+            cell.textLabel?.text = jobObjc.getJobTitle()
         case 1:
             cell.textLabel?.text = females[indexPath.row]
         default:
