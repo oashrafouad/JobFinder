@@ -15,7 +15,7 @@
 		07DBC0422996950A00B42394 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DBC0402996950A00B42394 /* Main.storyboard */; };
 		07DBC0442996950B00B42394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DBC0432996950B00B42394 /* Assets.xcassets */; };
 		07DBC0472996950B00B42394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DBC0452996950B00B42394 /* LaunchScreen.storyboard */; };
-		2003E5BF299DCBEF00BE09B5 /* jobsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5BE299DCBEF00BE09B5 /* jobsTableVC.swift */; };
+		2003E5C1299E6F4400BE09B5 /* jobsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5C0299E6F4400BE09B5 /* jobsTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		07DBC0432996950B00B42394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07DBC0462996950B00B42394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07DBC0482996950B00B42394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2003E5BE299DCBEF00BE09B5 /* jobsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobsTableVC.swift; sourceTree = "<group>"; };
+		2003E5C0299E6F4400BE09B5 /* jobsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobsTableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				07DBC03E2996950A00B42394 /* ViewController.swift */,
-				2003E5BE299DCBEF00BE09B5 /* jobsTableVC.swift */,
+				2003E5C0299E6F4400BE09B5 /* jobsTableVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07DBC03F2996950A00B42394 /* ViewController.swift in Sources */,
-				2003E5BF299DCBEF00BE09B5 /* jobsTableVC.swift in Sources */,
+				2003E5C1299E6F4400BE09B5 /* jobsTableVC.swift in Sources */,
 				07DBC03B2996950A00B42394 /* AppDelegate.swift in Sources */,
 				07DBC03D2996950A00B42394 /* SceneDelegate.swift in Sources */,
 				0737401D2999900D004F1FBF /* Job.swift in Sources */,
