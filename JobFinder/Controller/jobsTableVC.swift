@@ -15,6 +15,16 @@ class jobsTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Example code for job struct
+        
+        // Intialize jobbrain object
+        var jobBrain = JobBrain()
+        
+        // Get job object and store in a variable (at index 0 as this function is used for the first time)
+        var job = jobBrain.getJob()
+        
+        // Access the title of Job object
+        var title = job.title
     }
 
     // MARK: - Table view data source
