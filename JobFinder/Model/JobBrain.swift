@@ -19,23 +19,15 @@ struct JobBrain
         Job(title: "UX/UI Designer", description: "Our team is seeking an experienced UX/UI Designer to join us in developing cutting-edge mobile applications. You will be in charge of designing attractive user interfaces and user experiences. Additionally, you will be collaborating with our software engineers, product managers, and other stakeholders to make certain our products satisfy our customers' requirements.", technology: "Figma", company: "PQR Solutions")
     ]
     
-    func getJobTitle() -> String
-    {
-        return jobsList[0].title
-    }
     
-    func getJobDescription() -> String
-    {
-        return jobsList[0].description
-    }
+    // Index of Job object in jobsList array
+    var jobNumber = 0
     
-    func getJobTechnology() -> String
+    // Get the Job object at from array at index jobNumber
+    mutating func getJob() -> Job
     {
-        return jobsList[0].technology
-    }
-    
-    func getJobCompany() -> String
-    {
-        return jobsList[0].company
+        var currentJob = jobsList[jobNumber]
+        jobNumber += 1
+        return currentJob
     }
 }
