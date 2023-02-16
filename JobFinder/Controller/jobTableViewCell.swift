@@ -8,7 +8,10 @@
 import UIKit
 
 class jobTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var technologyLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +23,6 @@ class jobTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func applyButton(_ sender: Any) {
+    }
 }

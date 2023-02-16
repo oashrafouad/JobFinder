@@ -10,21 +10,15 @@ import UIKit
 class jobsTableVC: UITableViewController {
     // Initialize an object of the struct to be able to call functions on it
     var jobObjc = JobBrain()
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Example code for job struct
         
-        // Intialize jobbrain object
-        var jobBrain = JobBrain()
-        
-        // Get job object and store in a variable (at index 0 as this function is used for the first time)
-        var job = jobBrain.getJob()
-        
-        // Access the title of Job object
-        var title = job.title
+
+       
     }
 
     // MARK: - Table view data source
@@ -42,7 +36,7 @@ class jobsTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 200
+        return 230
     }
 
     
@@ -59,14 +53,20 @@ class jobsTableVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! jobTableViewCell
 //     print("Secion #\(indexPath.section), row #\(indexPath.row)")
         //we make the cell text label = the value of row index in the array
 //            cell.textLabel?.text = jobObjc.getJobTitle()
-        cell.detailTextLabel?.text = "ITI"
-        cell.imageView?.image = UIImage(named: "flower")
+        // Get job object and store in a variable (at index 0 as this function is used for the first time)
+        var job = jobObjc.getJob()
         
-        cell.accessoryType = .detailDisclosureButton
+        //jobCell.titleLabel?.text = jobTitle
+        cell.titleLabel?.text = job.title
+        cell.descriptionLabel?.text = job.description
+        cell.technologyLabel?.text = job.technology
+//        cell.detailTextLabel?.text = "ITI"
+//        cell.imageView?.image = UIImage(named: "flower")
+//
 
         return cell
     }

@@ -104,49 +104,50 @@ You can also post jobs to recruit for.</string>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="drE-1t-dmU" customClass="jobTableViewCell" customModule="JobFinder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="drE-1t-dmU" id="MyK-sG-PFz">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="drE-1t-dmU" id="MyK-sG-PFz" customClass="jobTableViewCell" customModule="JobFinder" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-J1-PbM">
-                                            <rect key="frame" x="173" y="150" width="68" height="35"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-J1-PbM">
+                                            <rect key="frame" x="173" y="174" width="68" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="filled" title="Apply">
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                             </buttonConfiguration>
                                             <connections>
                                                 <action selector="applyButton:" destination="DQI-K4-RVg" eventType="touchUpInside" id="CYs-KF-4Wx"/>
+                                                <action selector="applyButton:" destination="drE-1t-dmU" eventType="touchUpInside" id="WdZ-bb-pxK"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="job description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFX-Yb-EMK">
-                                            <rect key="frame" x="20" y="90" width="113" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dty-G1-iFq">
+                                            <rect key="frame" x="20" y="58" width="374" height="77"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dty-G1-iFq">
-                                            <rect key="frame" x="20" y="40" width="52" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="Fq3-EJ-E2e"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEL-or-Xix">
+                                            <rect key="frame" x="20" y="20" width="374" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgm-7b-1EE">
+                                            <rect key="frame" x="20" y="136" width="221" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemBlueColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="tFX-Yb-EMK" firstAttribute="leading" secondItem="MyK-sG-PFz" secondAttribute="leading" constant="20" symbolic="YES" id="9M2-K1-6y9"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Gmn-J1-PbM" secondAttribute="bottom" constant="4" id="CQF-MI-0Yv"/>
-                                        <constraint firstItem="Gmn-J1-PbM" firstAttribute="centerX" secondItem="MyK-sG-PFz" secondAttribute="centerX" id="Mvt-JM-7tk"/>
-                                        <constraint firstItem="dty-G1-iFq" firstAttribute="leading" secondItem="MyK-sG-PFz" secondAttribute="leadingMargin" id="Trq-JV-u5s"/>
-                                        <constraint firstItem="tFX-Yb-EMK" firstAttribute="centerY" secondItem="MyK-sG-PFz" secondAttribute="centerY" id="VBO-n2-FSb"/>
-                                        <constraint firstItem="dty-G1-iFq" firstAttribute="leading" secondItem="MyK-sG-PFz" secondAttribute="leadingMargin" id="VaP-Ly-6mc"/>
-                                        <constraint firstItem="dty-G1-iFq" firstAttribute="leading" secondItem="MyK-sG-PFz" secondAttribute="leading" constant="20" symbolic="YES" id="Z39-Wh-GGn"/>
-                                        <constraint firstItem="dty-G1-iFq" firstAttribute="leading" secondItem="MyK-sG-PFz" secondAttribute="leadingMargin" id="i8E-V8-kYz"/>
-                                        <constraint firstItem="tFX-Yb-EMK" firstAttribute="top" secondItem="dty-G1-iFq" secondAttribute="bottom" constant="20" id="jO7-k4-CUh"/>
-                                        <constraint firstItem="Gmn-J1-PbM" firstAttribute="height" secondItem="MyK-sG-PFz" secondAttribute="height" multiplier="0.175" id="qAD-vj-K4m"/>
-                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="dty-G1-iFq" id="nLw-TV-fhY"/>
+                                    <outlet property="technologyLabel" destination="xgm-7b-1EE" id="nmC-VR-XBq"/>
+                                    <outlet property="titleLabel" destination="SEL-or-Xix" id="Joy-3j-vNe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -157,13 +158,16 @@ You can also post jobs to recruit for.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsG-3b-1ss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-133.33333333333334" y="752.67857142857144"/>
+            <point key="canvasLocation" x="137.68115942028987" y="659.59821428571422"/>
         </scene>
     </scenes>
     <resources>
         <image name="Group" width="199" height="201"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
