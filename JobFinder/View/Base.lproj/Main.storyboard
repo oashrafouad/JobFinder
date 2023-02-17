@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,6 +250,9 @@ You can also post jobs to recruit for.</string>
                                 <buttonConfiguration key="configuration" style="filled" title="Log in">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="24"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="dOy-k8-97f" kind="show" id="zAe-wd-BTx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y7o-ZI-Lg2"/>
@@ -358,7 +361,7 @@ You can also post jobs to recruit for.</string>
         <!--Profile-->
         <scene sceneID="5uq-Sg-db4">
             <objects>
-                <viewController id="Cs0-Fx-XMu" customClass="ViewController" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Cs0-Fx-XMu" customClass="ProfileVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s4i-Lz-p8A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,7 +415,7 @@ You can also post jobs to recruit for.</string>
                                             <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65609478476821204" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="33P-vB-Ojm"/>
+                                            <action selector="logOutButtonPressed:" destination="Cs0-Fx-XMu" eventType="touchUpInside" id="iIu-B0-K4b"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -433,10 +436,10 @@ You can also post jobs to recruit for.</string>
             </objects>
             <point key="canvasLocation" x="6470" y="881"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab BarVC-->
         <scene sceneID="bYC-Hn-f5Q">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dOy-k8-97f" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dOy-k8-97f" customClass="TabBarVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Nsc-mX-02x"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SSq-Jc-RAc">
@@ -544,7 +547,7 @@ You can also post jobs to recruit for.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b1u-sr-mwP"/>
+        <segue reference="km7-Wz-sgI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group" width="199" height="201"/>
