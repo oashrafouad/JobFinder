@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0737401D2999900D004F1FBF /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737401C2999900D004F1FBF /* Job.swift */; };
 		0737401F29999208004F1FBF /* JobBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737401E29999208004F1FBF /* JobBrain.swift */; };
+		073FE831299FACE10065679A /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FE830299FACE10065679A /* LogInVC.swift */; };
 		074ECD42299FA2A200CF690B /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ECD41299FA2A200CF690B /* TabBarVC.swift */; };
 		074ECD44299FA2FE00CF690B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ECD43299FA2FE00CF690B /* ProfileVC.swift */; };
 		074ECD46299FA46500CF690B /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ECD45299FA46500CF690B /* WelcomeVC.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		0737401C2999900D004F1FBF /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		0737401E29999208004F1FBF /* JobBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobBrain.swift; sourceTree = "<group>"; };
+		073FE830299FACE10065679A /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		074ECD41299FA2A200CF690B /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		074ECD43299FA2FE00CF690B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		074ECD45299FA46500CF690B /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				074ECD41299FA2A200CF690B /* TabBarVC.swift */,
 				074ECD43299FA2FE00CF690B /* ProfileVC.swift */,
 				074ECD45299FA46500CF690B /* WelcomeVC.swift */,
+				073FE830299FACE10065679A /* LogInVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			files = (
 				074ECD44299FA2FE00CF690B /* ProfileVC.swift in Sources */,
 				07DBC03F2996950A00B42394 /* ViewController.swift in Sources */,
+				073FE831299FACE10065679A /* LogInVC.swift in Sources */,
 				2003E5C1299E6F4400BE09B5 /* jobsTableVC.swift in Sources */,
 				20897447299E957F00350F14 /* jobTableViewCell.swift in Sources */,
 				07DBC03B2996950A00B42394 /* AppDelegate.swift in Sources */,
