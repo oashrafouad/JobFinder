@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct JobBrain
+class JobBrain
 {
     var jobsList = [
         Job(title: "iOS Software Engineer", description: "We are looking for an experienced iOS Software Engineer to join our team. You will be working with a team of experienced engineers to develop and implement our mobile applications.", track: "Swift", company: "ABC Corporation"),
@@ -19,15 +19,25 @@ struct JobBrain
         Job(title: "UX/UI Designer", description: "Our team is seeking an experienced UX/UI Designer to join us in developing cutting-edge mobile applications. You will be in charge of designing attractive user interfaces and user experiences. Additionally, you will be collaborating with our software engineers, product managers, and other stakeholders to make certain our products satisfy our customers' requirements.", track: "Figma", company: "PQR Solutions")
     ]
     
-    
     // Index of Job object in jobsList array
     var jobNumber = 0
     
     // Get the Job object at from array at index jobNumber
-    mutating func getJob() -> Job
+    func getJob() -> Job
     {
         var currentJob = jobsList[jobNumber]
         jobNumber += 1
         return currentJob
     }
+    
+    // Add new Job object to jobsList array
+    func addJob(title: String, description: String, track: String, company: String)
+    {
+        jobsList.append(Job(title: title, description: description, track: track, company: company))
+        print(jobsList)
+        print("\n")
+    }
+    
 }
+
+var jobObjc = JobBrain()

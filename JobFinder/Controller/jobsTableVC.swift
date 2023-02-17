@@ -9,20 +9,17 @@ import UIKit
 
 class JobsTableVC: UITableViewController {
     // Initialize an object of the struct to be able to call functions on it
-    var jobObjc = JobBrain()
-   
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Example code for job struct
         
-
        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(jobObjc.jobNumber)
+        print(jobObjc.jobsList)
     }
 
     // MARK: - Table view data source
