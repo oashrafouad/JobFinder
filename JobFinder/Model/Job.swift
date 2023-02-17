@@ -13,7 +13,7 @@ struct Job
 {
     var title : String
     var description : String
-    var technology : String
+    var track : String
     var company : String
 //    var link : URL
 }

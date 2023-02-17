@@ -7,7 +7,7 @@
 
 import UIKit
 
-class jobsTableVC: UITableViewController {
+class JobsTableVC: UITableViewController {
     // Initialize an object of the struct to be able to call functions on it
     var jobObjc = JobBrain()
    
@@ -19,6 +19,10 @@ class jobsTableVC: UITableViewController {
         
 
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(jobObjc.jobNumber)
     }
 
     // MARK: - Table view data source
@@ -53,7 +57,7 @@ class jobsTableVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! jobTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! JobTableViewCell
 //     print("Secion #\(indexPath.section), row #\(indexPath.row)")
         //we make the cell text label = the value of row index in the array
 //            cell.textLabel?.text = jobObjc.getJobTitle()
@@ -63,7 +67,7 @@ class jobsTableVC: UITableViewController {
         //jobCell.titleLabel?.text = jobTitle
         cell.titleLabel?.text = job.title
         cell.descriptionLabel?.text = job.description
-        cell.technologyLabel?.text = job.technology
+        cell.technologyLabel?.text = job.track
 //        cell.detailTextLabel?.text = "ITI"
 //        cell.imageView?.image = UIImage(named: "flower")
 //

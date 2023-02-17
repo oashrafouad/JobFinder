@@ -463,16 +463,16 @@ You can also post jobs to recruit for.</string>
         <!--Home-->
         <scene sceneID="7YB-IH-0qC">
             <objects>
-                <tableViewController id="DQI-K4-RVg" customClass="jobsTableVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="DQI-K4-RVg" customClass="JobsTableVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="VEJ-vD-GqL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="drE-1t-dmU" customClass="jobTableViewCell" customModule="JobFinder" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="drE-1t-dmU" customClass="JobTableViewCell" customModule="JobFinder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="drE-1t-dmU" id="MyK-sG-PFz" customClass="jobTableViewCell" customModule="JobFinder" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="drE-1t-dmU" id="MyK-sG-PFz" customClass="JobTableViewCell" customModule="JobFinder" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
