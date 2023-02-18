@@ -365,6 +365,31 @@ You can also post jobs to recruit for.</string>
             </objects>
             <point key="canvasLocation" x="5659" y="881"/>
         </scene>
+        <!--Job DetailsVC-->
+        <scene sceneID="HQ3-Cu-gXe">
+            <objects>
+                <viewController id="2UI-qp-zcw" customClass="JobDetailsVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fdl-5C-WuL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOU-9k-3m6">
+                                <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" systemColor="systemBlueColor"/>
+                                <items>
+                                    <navigationItem title="Title" id="hA2-0Y-Jly"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GkD-57-6bi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Lm-1E-Nc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4819" y="1543"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="5uq-Sg-db4">
             <objects>
@@ -473,11 +498,11 @@ You can also post jobs to recruit for.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="drE-1t-dmU" customClass="JobTableViewCell" customModule="JobFinder" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="414" height="200"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="225" id="drE-1t-dmU" customClass="JobTableViewCell" customModule="JobFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="414" height="225"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="drE-1t-dmU" id="MyK-sG-PFz" customClass="JobTableViewCell" customModule="JobFinder" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-J1-PbM">
@@ -532,7 +557,7 @@ You can also post jobs to recruit for.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsG-3b-1ss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4820" y="881"/>
+            <point key="canvasLocation" x="4818.840579710145" y="880.58035714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kEF-4R-iRu">

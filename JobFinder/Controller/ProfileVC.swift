@@ -14,7 +14,11 @@ class ProfileVC: UIViewController {
         
         // Return back to login/register screen first time, then return to welcome screen second time
         self.navigationController?.popViewController(animated: true)
-        self.navigationController?.popViewController(animated: true)
+
+
+        //self.navigationController?.popViewController(animated: true)
+
+
 
     }
 }

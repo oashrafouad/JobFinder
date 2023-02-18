@@ -42,14 +42,14 @@ class JobsTableVC: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-            return "Jobs"// we need to add (the targeted track of user as a returned value from struct) shuch as: ios developer jobs ...etc
+            return "All Jobs"// we need to add (the targeted track of user as a returned value from struct) shuch as: ios developer jobs ...etc
         }
     
     //function to make changes when select a cell from the table
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print(jobObjc.jobsList[indexPath.row])
-//
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(jobObjc.jobsList[indexPath.row])
+
+    }
     
 
     
