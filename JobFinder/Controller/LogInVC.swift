@@ -29,12 +29,12 @@ class LogInVC: UIViewController {
         if(userObjc.isUserFound(email: emailTextField.text!, password: passwordTextField.text!))
         {
             logInCheckLabel.isHidden = true
+            userObjc.assignCurrentUser(email: emailTextField.text!, password: passwordTextField.text!)
         }
         else
         {
             logInCheckLabel.isHidden = false
         }
-        
     }
     
     // This will execute whenever there are any touches on the whole screen (essentially always executing and checking for fields)

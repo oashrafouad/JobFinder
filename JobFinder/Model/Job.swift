@@ -15,4 +15,5 @@ struct Job
     var description: String
     var track: String
     var company: String
+    
 }

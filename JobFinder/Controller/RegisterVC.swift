@@ -21,7 +21,7 @@ class RegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // These functions will execute whenever any of the text fields have their text edited
         fullNameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         companyTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -61,6 +61,8 @@ class RegisterVC: UIViewController {
         
         // The gender input checks the index of the selected segment, then knows the title accordingly (Male: 0, Female: 1)
         userObjc.addUser(fullName: fullNameTextField.text!, gender: genderSwitch.titleForSegment(at: genderSwitch.selectedSegmentIndex)!, company: companyTextField.text!, track: trackTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
+     
+        userObjc.assignCurrentUser(email: emailTextField.text!, password: passwordTextField.text!)
         
     }
     

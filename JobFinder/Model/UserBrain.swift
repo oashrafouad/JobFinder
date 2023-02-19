@@ -11,16 +11,13 @@ class UserBrain
 {
     var usersList : [User] = [
     User(fullName: "Omar Ashraf", gender: "Male", company: "ITI", track: "iOS", email: "oashrafouad@gmail.com", password: "omar"),
-    User(fullName: "Omar Ashraf", gender: "Male", company: "ITI", track: "iOS", email: "oashrafouad@gmail.com", password: "omar"),
-    User(fullName: "Tadros Nasr", gender: "Male", company: "ITI", track: "iOS", email: "tadrosnasr@gmail.com", password: "tadros"),
-    User(fullName: "Saeed Hassan", gender: "Male", company: "ITI", track: "iOS", email: "saeedhassan@gmail.com", password: "saeed")
+    User(fullName: "Tadros Nasr", gender: "Male", company: "ITI", track: "Java", email: "tadrosnasr@gmail.com", password: "tadros"),
+    User(fullName: "Saeed Hassan", gender: "Male", company: "ITI", track: "Android", email: "saeedhassan@gmail.com", password: "saeed"),
     ]
     
     func addUser(fullName: String, gender: String, company: String, track: String, email: String, password: String)
     {
         userObjc.usersList.append(User(fullName: fullName, gender: gender, company: company, track: track, email: email, password: password))
-        print(userObjc.usersList)
-        print("\n")
     }
     
     func isUserFound(email: String, password: String) -> Bool
@@ -38,6 +35,17 @@ class UserBrain
             return true
         }
     }
+    
+    // Make the user with these credentials
+    func assignCurrentUser(email: String, password: String)
+    {
+        
+        var users = userObjc.usersList.filter({$0.email == email && $0.password == password})
+        
+        currentUser = User(fullName: users[0].fullName, gender: users[0].gender, company: users[0].company, track: users[0].track, email: users[0].email, password: users[0].password)
+    }
+    
 }
 
 var userObjc = UserBrain()
+var currentUser : User?
