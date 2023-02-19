@@ -23,7 +23,7 @@ class PostJobVC: UIViewController, UITextViewDelegate {
         descriptionTextView.layer.borderWidth = 1.0
         descriptionTextView.layer.cornerRadius = 5
         
-        // These functions execute whenever any of the text fields or text views have their text edited
+        // These functions will execute whenever any of the text fields or text views have their text edited
         jobTitleTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         trackTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         companyTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -53,8 +53,10 @@ class PostJobVC: UIViewController, UITextViewDelegate {
     
     // For the text fields
     @objc func textFieldDidChange(_ textField: UITextField) {
+        
         if (textField.hasText)
         {
+            // Reset to default text field appearance
             textField.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         }
         else
@@ -69,6 +71,7 @@ class PostJobVC: UIViewController, UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         if (textView.hasText)
         {
+            // Reset to default text view appearance
             textView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         }
         else

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9u-pn-61p">
-                                <rect key="frame" x="220" y="762" width="163" height="54"/>
+                                <rect key="frame" x="220" y="783" width="163" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Register">
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqN-7b-LxH">
-                                <rect key="frame" x="31" y="762" width="163" height="54"/>
+                                <rect key="frame" x="31" y="783" width="163" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log in">
@@ -71,10 +71,10 @@ You can also post jobs to recruit for.</string>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="2.6785714285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--RegisterVC-->
         <scene sceneID="ka4-Jg-rel">
             <objects>
-                <viewController storyboardIdentifier="lol" id="nNy-UL-I48" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lol" id="nNy-UL-I48" customClass="RegisterVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kOQ-Uf-dec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,16 +172,19 @@ You can also post jobs to recruit for.</string>
                                     <segment title="Female"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.40000000000000002" green="0.6588235294117647" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="genderSwitchPressed:" destination="nNy-UL-I48" eventType="valueChanged" id="q5s-fK-8Q2"/>
+                                </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCg-6A-Qmz">
-                                <rect key="frame" x="83" y="762" width="249" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCg-6A-Qmz">
+                                <rect key="frame" x="83" y="783" width="249" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Confirm Registration">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="registerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ra-lU-HwH"/>
+                                    <action selector="registerButtonPressed:" destination="nNy-UL-I48" eventType="touchUpInside" id="7N7-Wk-pJH"/>
                                     <segue destination="dOy-k8-97f" kind="show" id="km7-Wz-sgI"/>
                                 </connections>
                             </button>
@@ -192,11 +195,29 @@ You can also post jobs to recruit for.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passwords don't match!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJu-FO-9rm">
+                                <rect key="frame" x="24" y="735" width="169" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fT9-5F-Oqd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="LJ5-kN-dCi"/>
+                    <connections>
+                        <outlet property="companyTextField" destination="gA1-Wi-nYT" id="7Hl-eU-VWD"/>
+                        <outlet property="confirmPasswordTextField" destination="YXn-no-dv5" id="9H6-r7-CJ4"/>
+                        <outlet property="emailTextField" destination="Cdj-Ur-BcJ" id="bhi-Of-lKH"/>
+                        <outlet property="fullNameTextField" destination="cu4-R5-Igp" id="VJ3-Mu-pie"/>
+                        <outlet property="genderSwitch" destination="dMP-Ez-lzf" id="9Ez-xP-DSg"/>
+                        <outlet property="passwordMatchLabel" destination="mJu-FO-9rm" id="KN4-gL-Ihj"/>
+                        <outlet property="passwordTextField" destination="pyl-m7-Az9" id="zCU-ep-9Yd"/>
+                        <outlet property="registerButton" destination="VCg-6A-Qmz" id="49N-T6-LrH"/>
+                        <outlet property="trackTextField" destination="8aX-0X-Tyu" id="VhH-zG-SD7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asl-dL-63E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,7 +264,7 @@ You can also post jobs to recruit for.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R4-HE-ZIh">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R4-HE-ZIh">
                                 <rect key="frame" x="125" y="347" width="163" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -251,21 +272,32 @@ You can also post jobs to recruit for.</string>
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="dOy-k8-97f" kind="show" id="zAe-wd-BTx"/>
+                                    <action selector="logInButtonPressed:" destination="mqU-eq-whD" eventType="touchUpInside" id="Jeb-iO-sod"/>
+                                    <segue destination="dOy-k8-97f" kind="show" identifier="seguee" id="zAe-wd-BTx"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wrong email or password! Please try again." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeW-op-oPv">
+                                <rect key="frame" x="28" y="307" width="303" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y7o-ZI-Lg2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="aYa-Oe-2Fz"/>
                     <connections>
-                        <outlet property="emailTextField" destination="hae-qV-36j" id="Tmw-LP-1bS"/>
+                        <outlet property="emailTextField" destination="eGE-Q4-ojW" id="SZa-fk-M0o"/>
+                        <outlet property="logInButton" destination="8R4-HE-ZIh" id="fHE-Kn-z6P"/>
+                        <outlet property="logInCheckLabel" destination="qeW-op-oPv" id="S21-pW-LE5"/>
+                        <outlet property="passwordTextField" destination="3Jh-nU-gKN" id="iuA-as-GM7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12A-xI-2ak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1430" y="881"/>
+            <point key="canvasLocation" x="1428.985507246377" y="880.58035714285711"/>
         </scene>
         <!--Post Job-->
         <scene sceneID="lgD-FJ-mn1">
@@ -374,7 +406,7 @@ You can also post jobs to recruit for.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOU-9k-3m6">
-                                <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                                <rect key="frame" x="-1" y="48" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" systemColor="systemBlueColor"/>
                                 <items>
@@ -420,11 +452,6 @@ You can also post jobs to recruit for.</string>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.40000000000000002" green="0.6588235294117647" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="oashrafouad@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAP-MI-cPY">
                                         <rect key="frame" x="28" y="56" width="199" height="22"/>
@@ -462,11 +489,9 @@ You can also post jobs to recruit for.</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="hHY-NA-sza"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="trackView" destination="hgm-2G-EgJ" id="eAw-iP-3lC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTO-zL-kfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -603,6 +628,9 @@ You can also post jobs to recruit for.</string>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
