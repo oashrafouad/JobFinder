@@ -22,6 +22,13 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // These two lines set the color of the selected title to white to be better looking against the blue background
+        // Store the white color in a text attribute
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.00)]
+        
+        // Set that attrobute to all segmented controls on the screen (which is just one in this case)
+        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .selected)
+        
         // These functions will execute whenever any of the text fields have their text edited
         fullNameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         companyTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
