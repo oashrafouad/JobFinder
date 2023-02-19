@@ -16,11 +16,10 @@ class JobsTableVC: UITableViewController {
         // Example code for job struct
         
        
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        print(jobObjc.jobsList)
-    }
+    
 
     // MARK: - Table view data source
 
@@ -59,12 +58,15 @@ class JobsTableVC: UITableViewController {
         //we make the cell text label = the value of row index in the array
 //            cell.textLabel?.text = jobObjc.getJobTitle()
         // Get job object and store in a variable (at index 0 as this function is used for the first time)
+        
         var job = jobObjc.getJob()
         
         //jobCell.titleLabel?.text = jobTitle
+        
         cell.titleLabel?.text = job.title
         cell.descriptionLabel?.text = job.description
         cell.technologyLabel?.text = job.track
+        
 //        cell.detailTextLabel?.text = "ITI"
 //        cell.imageView?.image = UIImage(named: "flower")
 //

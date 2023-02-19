@@ -25,16 +25,26 @@ class JobBrain
     // Get the Job object at from array at index jobNumber
     func getJob() -> Job
     {
-        var currentJob = jobsList[jobNumber]
-        jobNumber += 1
+        var currentJob = jobObjc.jobsList[jobNumber]
+        
+        // Iterate through the array
+        if (jobObjc.jobNumber < jobObjc.jobsList.count - 1)
+        {
+            jobObjc.jobNumber += 1
+        }
+        else
+        {
+            jobObjc.jobNumber = 0
+        }
+        
         return currentJob
     }
     
     // Add new Job object to jobsList array
     func addJob(title: String, description: String, track: String, company: String)
     {
-        jobsList.append(Job(title: title, description: description, track: track, company: company))
-        print(jobsList)
+        jobObjc.jobsList.append(Job(title: title, description: description, track: track, company: company))
+        print(jobObjc.jobsList)
         print("\n")
     }
     

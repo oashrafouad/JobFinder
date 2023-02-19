@@ -11,9 +11,8 @@ import Foundation
 // This is a struct that describes what information a job should have so we can create job instances from it
 struct Job
 {
-    var title : String
-    var description : String
-    var track : String
-    var company : String
-//    var link : URL
+    var title: String
+    var description: String
+    var track: String
+    var company: String
 }

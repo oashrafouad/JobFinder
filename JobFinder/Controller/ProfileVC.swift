@@ -9,6 +9,12 @@ import UIKit
 
 class ProfileVC: UIViewController {
     
+    @IBOutlet weak var trackView: UIView!
+    
+    override func viewDidLoad() {
+        // Modify the cornerRadius at runtime as it's not possible from storyboard
+        trackView.layer.cornerRadius = 10
+    }
     
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
         

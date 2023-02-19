@@ -11,6 +11,7 @@ class WelcomeVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         
+        // Hide the navigation bar as this view should always appear as the root view to the user
         self.navigationController?.isNavigationBarHidden = true
         
     }
