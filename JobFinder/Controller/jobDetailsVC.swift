@@ -9,10 +9,14 @@ import UIKit
 
 class jobDetailsVC: UIViewController {
 
+  
+    @IBOutlet weak var navBarTitle: UINavigationItem!
+    @IBOutlet weak var navBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        var job1 = jobObjc.getJob()
+        navBarTitle.title = job1.title
+        
     }
     
 

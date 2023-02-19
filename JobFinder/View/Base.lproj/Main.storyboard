@@ -368,9 +368,9 @@ You can also post jobs to recruit for.</string>
         <!--Job DetailsVC-->
         <scene sceneID="HQ3-Cu-gXe">
             <objects>
-                <viewController id="2UI-qp-zcw" customClass="JobDetailsVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2UI-qp-zcw" customClass="jobDetailsVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fdl-5C-WuL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOU-9k-3m6">
@@ -385,10 +385,14 @@ You can also post jobs to recruit for.</string>
                         <viewLayoutGuide key="safeArea" id="GkD-57-6bi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="navBar" destination="sOU-9k-3m6" id="nhH-ck-hRD"/>
+                        <outlet property="navBarTitle" destination="hA2-0Y-Jly" id="Qlm-fn-j8k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Lm-1E-Nc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4819" y="1543"/>
+            <point key="canvasLocation" x="4819" y="1587"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5uq-Sg-db4">
@@ -544,6 +548,7 @@ You can also post jobs to recruit for.</string>
                                     <outlet property="descriptionLabel" destination="dty-G1-iFq" id="nLw-TV-fhY"/>
                                     <outlet property="technologyLabel" destination="xgm-7b-1EE" id="nmC-VR-XBq"/>
                                     <outlet property="titleLabel" destination="SEL-or-Xix" id="Joy-3j-vNe"/>
+                                    <segue destination="2UI-qp-zcw" kind="presentation" id="KWB-nh-3pp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -579,7 +584,7 @@ You can also post jobs to recruit for.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="km7-Wz-sgI"/>
+        <segue reference="zAe-wd-BTx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group" width="199" height="201"/>

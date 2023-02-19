@@ -47,8 +47,7 @@ class JobsTableVC: UITableViewController {
     
     //function to make changes when select a cell from the table
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(jobObjc.jobsList[indexPath.row])
-
+        // when click at the cell 
     }
     
 
