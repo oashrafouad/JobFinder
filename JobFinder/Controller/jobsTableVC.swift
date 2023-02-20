@@ -46,7 +46,9 @@ class JobsTableVC: UITableViewController {
     
     //function to make changes when select a cell from the table
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // when click at the cell 
+        // when click at the cell
+        let detailVC = storyboard?.instantiateViewController(identifier: "jobDetailsVC") as! jobDetailsVC
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
 

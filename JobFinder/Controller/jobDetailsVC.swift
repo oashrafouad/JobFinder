@@ -11,23 +11,25 @@ class jobDetailsVC: UIViewController {
 
   
     @IBOutlet weak var navBarTitle: UINavigationItem!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var trackLabel: UILabel!
+    @IBOutlet weak var descripeLabel: UILabel!
     @IBOutlet weak var navBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         var job1 = jobObjc.getJob()
         navBarTitle.title = job1.title
-        
+        titleLabel.text = job1.title + " |"
+        companyLabel.text = job1.company
+        trackLabel.text = job1.track
+        descripeLabel.text = job1.description
     }
     
 
-    /*
-    // MARK: - Navigation
+   
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func applyButton(_ sender: UIButton) {
+        self.navigationController?.dismiss(animated: true)
     }
-    */
-
 }

@@ -25,6 +25,7 @@ class ProfileVC: UIViewController {
         fullNameLabel.text = currentUser?.fullName
         emailLabel.text = currentUser?.email
         trackLabel.text = currentUser?.track
+        
     }
     
     @IBAction func logOutButtonPressed(_ sender: UIButton) {

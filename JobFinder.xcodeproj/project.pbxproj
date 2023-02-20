@@ -106,15 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				07DBC03E2996950A00B42394 /* ViewController.swift */,
+				074ECD45299FA46500CF690B /* WelcomeVC.swift */,
+				07B5713E29A160060013476E /* RegisterVC.swift */,
+				073FE830299FACE10065679A /* LogInVC.swift */,
+				074ECD41299FA2A200CF690B /* TabBarVC.swift */,
 				2003E5C0299E6F4400BE09B5 /* JobsTableVC.swift */,
 				20897446299E957F00350F14 /* JobTableViewCell.swift */,
 				0791F4C6299F06EE00D29A7F /* PostJobVC.swift */,
-				074ECD41299FA2A200CF690B /* TabBarVC.swift */,
-				074ECD43299FA2FE00CF690B /* ProfileVC.swift */,
-				074ECD45299FA46500CF690B /* WelcomeVC.swift */,
-				073FE830299FACE10065679A /* LogInVC.swift */,
 				20409C98299FEE9100BC9E14 /* jobDetailsVC.swift */,
-				07B5713E29A160060013476E /* RegisterVC.swift */,
+				074ECD43299FA2FE00CF690B /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
