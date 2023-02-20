@@ -88,7 +88,7 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         var email = emailTextField.text!
         var password = passwordTextField.text!
         var company = companyTextField.text!
-        
+        let tab = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
         // Checks the index of the selected segment, then gets the title of the selected segment accordingly (Male: 0, Female: 1)
         var gender = genderSwitch.titleForSegment(at: genderSwitch.selectedSegmentIndex)!
         
@@ -98,7 +98,7 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         userObjc.addUser(fullName: fullName, gender: gender, company: company, track: track, email: email, password: password)
         
         userObjc.assignCurrentUser(email: emailTextField.text!, password: passwordTextField.text!)
-        
+        tab?.navigationController?.pushViewController(tab!, animated: true)
     }
     @objc func textFieldDidChange(_ textField: UITextField) {
         if (textField.hasText)

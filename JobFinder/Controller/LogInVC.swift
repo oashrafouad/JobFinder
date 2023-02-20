@@ -24,7 +24,7 @@ class LogInVC: UIViewController {
     }
     @IBAction func logInButtonPressed(_ sender: UIButton) {
         
-        
+        let Tab = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
         var email = emailTextField.text!
         var password = passwordTextField.text!
         // Check if a user exists with the entered credentials
@@ -33,7 +33,7 @@ class LogInVC: UIViewController {
         {
             logInCheckLabel.isHidden = true
             userObjc.assignCurrentUser(email: email, password: password)
-            
+            self.navigationController?.pushViewController(Tab!, animated: true)
         }
         else
         {

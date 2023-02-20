@@ -179,7 +179,6 @@ You can also post jobs to recruit for.</string>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="registerButtonPressed:" destination="nNy-UL-I48" eventType="touchUpInside" id="7N7-Wk-pJH"/>
-                                    <segue destination="dOy-k8-97f" kind="show" id="km7-Wz-sgI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make a New Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FP-TL-pZP">
@@ -271,7 +270,6 @@ You can also post jobs to recruit for.</string>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInButtonPressed:" destination="mqU-eq-whD" eventType="touchUpInside" id="Jeb-iO-sod"/>
-                                    <segue destination="dOy-k8-97f" kind="show" identifier="seguee" id="zAe-wd-BTx"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wrong email or password! Please try again." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeW-op-oPv">
@@ -542,7 +540,7 @@ You can also post jobs to recruit for.</string>
         <!--Tab BarVC-->
         <scene sceneID="bYC-Hn-f5Q">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dOy-k8-97f" customClass="TabBarVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarVC" automaticallyAdjustsScrollViewInsets="NO" id="dOy-k8-97f" customClass="TabBarVC" customModule="JobFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Nsc-mX-02x"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SSq-Jc-RAc">
@@ -707,7 +705,6 @@ You can also post jobs to recruit for.</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="9Vb-XM-nkv"/>
-        <segue reference="km7-Wz-sgI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group" width="199" height="201"/>
