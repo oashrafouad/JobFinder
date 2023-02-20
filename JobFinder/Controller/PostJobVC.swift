@@ -7,16 +7,22 @@
 
 import UIKit
 
-class PostJobVC: UIViewController, UITextViewDelegate {
+class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var jobTitleTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var trackTextField: UITextField!
     @IBOutlet weak var companyTextField: UITextField!
     @IBOutlet weak var postJobButton: UIButton!
+    @IBOutlet weak var trackPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        descriptionTextView.delegate = self
+        
+        // Set the delegate and data source for trackPicker to the delegate and data source of this view controller
+        trackPicker.delegate = self
+        trackPicker.dataSource = self
         
         // Make description text view look the same as the other text fields on this screen
         descriptionTextView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
@@ -25,17 +31,30 @@ class PostJobVC: UIViewController, UITextViewDelegate {
         
         // These functions will execute whenever any of the text fields or text views have their text edited
         jobTitleTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        trackTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         companyTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
-        descriptionTextView.delegate = self
-        
+    }
+    
+    // These 3 functions are for trackPicker
+    // Think of the UIPickerView as a table with rows and columns. This sets the number of vertical columns, in our case we only need one column containing all the tracks
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // This sets the number of rows (e.g. tracks) to be displayed
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return jobObjc.tracksList.count
+    }
+    
+    // This sets the title for each row. "row" represents the row index (starting from 0) so we get the value of the string at this index in tracksList array and return it
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return jobObjc.tracksList[row]
     }
     
     // This will execute whenever there are any touches on the whole screen (essentially always executing and checking for fields)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        if jobTitleTextField.hasText && descriptionTextView.hasText && trackTextField.hasText && companyTextField.hasText
+        if jobTitleTextField.hasText && descriptionTextView.hasText && companyTextField.hasText
         {
             postJobButton.isEnabled = true
         }
@@ -47,7 +66,14 @@ class PostJobVC: UIViewController, UITextViewDelegate {
     
     @IBAction func postJobButtonPressed(_ sender: UIButton) {
 
-        jobObjc.addJob(title: jobTitleTextField.text!, description: descriptionTextView.text, track: trackTextField.text!, company: companyTextField.text!)
+        var title = jobTitleTextField.text!
+        var description = descriptionTextView.text!
+        var company = companyTextField.text!
+
+        // Checks the index of the selected row in the component which has index 0 (e.g. the only component), then gets the track at this index in tracksList array. The values in trackPicker are presented in the same order as the trackList array, so they have the same indexes
+        var track = jobObjc.tracksList[trackPicker.selectedRow(inComponent: 0)]
+        
+        jobObjc.addJob(title: title, description: description, track: track, company: company)
         
     }
     

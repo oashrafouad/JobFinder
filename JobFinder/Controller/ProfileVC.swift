@@ -15,9 +15,6 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var trackLabel: UILabel!
     
-    
-    
-    
     override func viewDidLoad() {
         // Modify the cornerRadius at runtime as it's not possible from storyboard
         trackView.layer.cornerRadius = 10
@@ -32,13 +29,8 @@ class ProfileVC: UIViewController {
     
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
         
-        // Return back to login/register screen first time, then return to welcome screen second time
-//        self.navigationController?.popViewController(animated: true)
+        // Return to welcome screen
         self.navigationController?.popToRootViewController(animated: true)
-
-        //self.navigationController?.popViewController(animated: true)
-
-
-
+        
     }
 }

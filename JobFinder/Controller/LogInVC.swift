@@ -24,12 +24,15 @@ class LogInVC: UIViewController {
     }
     @IBAction func logInButtonPressed(_ sender: UIButton) {
         
+        
+        var email = emailTextField.text!
+        var password = passwordTextField.text!
         // Check if a user exists with the entered credentials
         // We need to find a way to block the segue from happening if no user is found
-        if(userObjc.isUserFound(email: emailTextField.text!, password: passwordTextField.text!))
+        if(userObjc.isUserFound(email: email, password: password))
         {
             logInCheckLabel.isHidden = true
-            userObjc.assignCurrentUser(email: emailTextField.text!, password: passwordTextField.text!)
+            userObjc.assignCurrentUser(email: email, password: password)
         }
         else
         {
