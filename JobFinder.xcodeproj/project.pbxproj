@@ -25,6 +25,7 @@
 		07DBC0472996950B00B42394 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DBC0452996950B00B42394 /* LaunchScreen.storyboard */; };
 		2003E5C1299E6F4400BE09B5 /* JobsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5C0299E6F4400BE09B5 /* JobsTableVC.swift */; };
 		20409C99299FEE9100BC9E14 /* jobDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20409C98299FEE9100BC9E14 /* jobDetailsVC.swift */; };
+		205D6E9C29A3E3DD00DDBBBE /* applyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205D6E9B29A3E3DD00DDBBBE /* applyViewController.swift */; };
 		20897447299E957F00350F14 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20897446299E957F00350F14 /* JobTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		07DBC0482996950B00B42394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2003E5C0299E6F4400BE09B5 /* JobsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableVC.swift; sourceTree = "<group>"; };
 		20409C98299FEE9100BC9E14 /* jobDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobDetailsVC.swift; sourceTree = "<group>"; };
+		205D6E9B29A3E3DD00DDBBBE /* applyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = applyViewController.swift; sourceTree = "<group>"; };
 		20897446299E957F00350F14 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,8 +114,9 @@
 				074ECD41299FA2A200CF690B /* TabBarVC.swift */,
 				2003E5C0299E6F4400BE09B5 /* JobsTableVC.swift */,
 				20897446299E957F00350F14 /* JobTableViewCell.swift */,
-				0791F4C6299F06EE00D29A7F /* PostJobVC.swift */,
 				20409C98299FEE9100BC9E14 /* jobDetailsVC.swift */,
+				205D6E9B29A3E3DD00DDBBBE /* applyViewController.swift */,
+				0791F4C6299F06EE00D29A7F /* PostJobVC.swift */,
 				074ECD43299FA2FE00CF690B /* ProfileVC.swift */,
 			);
 			path = Controller;
@@ -206,6 +209,7 @@
 				073FE831299FACE10065679A /* LogInVC.swift in Sources */,
 				2003E5C1299E6F4400BE09B5 /* JobsTableVC.swift in Sources */,
 				20409C99299FEE9100BC9E14 /* jobDetailsVC.swift in Sources */,
+				205D6E9C29A3E3DD00DDBBBE /* applyViewController.swift in Sources */,
 				07B5714329A166B30013476E /* UserBrain.swift in Sources */,
 				20897447299E957F00350F14 /* JobTableViewCell.swift in Sources */,
 				07DBC03B2996950A00B42394 /* AppDelegate.swift in Sources */,
@@ -363,7 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7GWRR7JP7Z;
+				DEVELOPMENT_TEAM = 5W5357KP3F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JobFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -376,7 +380,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.team.JobFinder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.to.JobFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -391,7 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7GWRR7JP7Z;
+				DEVELOPMENT_TEAM = 5W5357KP3F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JobFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -404,7 +408,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.team.JobFinder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.to.JobFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

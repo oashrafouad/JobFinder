@@ -33,6 +33,7 @@ class LogInVC: UIViewController {
         {
             logInCheckLabel.isHidden = true
             userObjc.assignCurrentUser(email: email, password: password)
+            
         }
         else
         {

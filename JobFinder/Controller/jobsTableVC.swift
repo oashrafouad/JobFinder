@@ -14,15 +14,7 @@ class JobsTableVC: UITableViewController {
         super.viewDidLoad()
         
         // Example code for job struct
-        
-       
-        
     }
-    
-    
-
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -46,9 +38,9 @@ class JobsTableVC: UITableViewController {
     
     //function to make changes when select a cell from the table
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // when click at the cell
+        // navigate each cell to its info in jobDetailsVC
         let detailVC = storyboard?.instantiateViewController(identifier: "jobDetailsVC") as! jobDetailsVC
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        self.navigationController?.present(detailVC, animated: true)
     }
     
 
@@ -61,17 +53,9 @@ class JobsTableVC: UITableViewController {
         // Get job object and store in a variable (at index 0 as this function is used for the first time)
         
         var job = jobObjc.getJob()
-        
-        //jobCell.titleLabel?.text = jobTitle
-        
         cell.titleLabel?.text = job.title
         cell.descriptionLabel?.text = job.description
         cell.technologyLabel?.text = job.track
-        
-//        cell.detailTextLabel?.text = "ITI"
-//        cell.imageView?.image = UIImage(named: "flower")
-//
-
         return cell
     }
 
