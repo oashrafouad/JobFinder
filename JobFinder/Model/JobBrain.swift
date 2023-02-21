@@ -35,7 +35,6 @@ class JobBrain
         
         // This is a closure that searches through usersList and returns an array of Job objects that have the same track as the track of the current user. $0 is shorthand for the first (and only) argument passed to the closure, which is jobObjc
         var jobs = jobObjc.jobsList.filter({$0.track == currentTrack})
-        print(currentUser!)
         return jobs
     }
     

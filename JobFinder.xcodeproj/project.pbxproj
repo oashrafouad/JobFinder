@@ -13,7 +13,7 @@
 		074ECD42299FA2A200CF690B /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ECD41299FA2A200CF690B /* TabBarVC.swift */; };
 		074ECD44299FA2FE00CF690B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ECD43299FA2FE00CF690B /* ProfileVC.swift */; };
 		074ECD46299FA46500CF690B /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074ECD45299FA46500CF690B /* WelcomeVC.swift */; };
-		077DA6A929A4695D00DA87A3 /* jobsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077DA6A829A4695D00DA87A3 /* jobsTableVC.swift */; };
+		077DA6A929A4695D00DA87A3 /* JobsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077DA6A829A4695D00DA87A3 /* JobsTableVC.swift */; };
 		0791F4C7299F06EE00D29A7F /* PostJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0791F4C6299F06EE00D29A7F /* PostJobVC.swift */; };
 		07B5713F29A160060013476E /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B5713E29A160060013476E /* RegisterVC.swift */; };
 		07B5714129A165A70013476E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B5714029A165A70013476E /* User.swift */; };
@@ -36,7 +36,7 @@
 		074ECD41299FA2A200CF690B /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		074ECD43299FA2FE00CF690B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		074ECD45299FA46500CF690B /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
-		077DA6A829A4695D00DA87A3 /* jobsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jobsTableVC.swift; sourceTree = "<group>"; };
+		077DA6A829A4695D00DA87A3 /* JobsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableVC.swift; sourceTree = "<group>"; };
 		0791F4C6299F06EE00D29A7F /* PostJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJobVC.swift; sourceTree = "<group>"; };
 		07B5713E29A160060013476E /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		07B5714029A165A70013476E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				07B5713E29A160060013476E /* RegisterVC.swift */,
 				073FE830299FACE10065679A /* LogInVC.swift */,
 				074ECD41299FA2A200CF690B /* TabBarVC.swift */,
-				077DA6A829A4695D00DA87A3 /* jobsTableVC.swift */,
+				077DA6A829A4695D00DA87A3 /* JobsTableVC.swift */,
 				20897446299E957F00350F14 /* JobTableViewCell.swift */,
 				20409C98299FEE9100BC9E14 /* jobDetailsVC.swift */,
 				205D6E9B29A3E3DD00DDBBBE /* applyViewController.swift */,
@@ -207,7 +207,7 @@
 				074ECD44299FA2FE00CF690B /* ProfileVC.swift in Sources */,
 				07DBC03F2996950A00B42394 /* ViewController.swift in Sources */,
 				073FE831299FACE10065679A /* LogInVC.swift in Sources */,
-				077DA6A929A4695D00DA87A3 /* jobsTableVC.swift in Sources */,
+				077DA6A929A4695D00DA87A3 /* JobsTableVC.swift in Sources */,
 				20409C99299FEE9100BC9E14 /* jobDetailsVC.swift in Sources */,
 				205D6E9C29A3E3DD00DDBBBE /* applyViewController.swift in Sources */,
 				07B5714329A166B30013476E /* UserBrain.swift in Sources */,
