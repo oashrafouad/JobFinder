@@ -217,6 +217,7 @@ You can also post jobs to recruit for.</string>
                         <outlet property="passwordMatchLabel" destination="mJu-FO-9rm" id="KN4-gL-Ihj"/>
                         <outlet property="passwordTextField" destination="pyl-m7-Az9" id="zCU-ep-9Yd"/>
                         <outlet property="registerButton" destination="VCg-6A-Qmz" id="49N-T6-LrH"/>
+                        <outlet property="taaap" destination="TMm-A6-zFX" id="0nK-Af-G0S"/>
                         <outlet property="trackPicker" destination="b3N-D5-VtC" id="31I-P0-xnd"/>
                     </connections>
                 </viewController>
@@ -467,12 +468,12 @@ You can also post jobs to recruit for.</string>
                         <viewLayoutGuide key="safeArea" id="GkD-57-6bi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nEr-KW-cV5"/>
                     <connections>
                         <outlet property="companyLabel" destination="o8e-tz-Z7h" id="SwU-g7-Dds"/>
                         <outlet property="descripeLabel" destination="1tg-aK-ZZe" id="tqg-eJ-78T"/>
                         <outlet property="navBar" destination="sOU-9k-3m6" id="nhH-ck-hRD"/>
                         <outlet property="navBarTitle" destination="hA2-0Y-Jly" id="Qlm-fn-j8k"/>
-                        <outlet property="tapGesture" destination="uFw-cW-l0C" id="uXc-a9-tYM"/>
                         <outlet property="titleLabel" destination="uJP-Xo-1ib" id="hUv-OT-V0b"/>
                         <outlet property="trackLabel" destination="f3P-OH-Y72" id="BQA-hg-Ooi"/>
                     </connections>
@@ -586,11 +587,11 @@ You can also post jobs to recruit for.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="225" id="drE-1t-dmU" customClass="JobTableViewCell" customModule="JobFinder" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="225" id="drE-1t-dmU" customClass="JobTableViewCell" customModule="JobFinder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="414" height="225"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="drE-1t-dmU" id="MyK-sG-PFz" customClass="JobTableViewCell" customModule="JobFinder" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383.5" height="225"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-J1-PbM">
@@ -601,8 +602,8 @@ You can also post jobs to recruit for.</string>
                                                 <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                             </buttonConfiguration>
                                             <connections>
+                                                <action selector="applyButton:" destination="drE-1t-dmU" eventType="touchUpInside" id="06F-nw-aR1"/>
                                                 <action selector="applyButton:" destination="DQI-K4-RVg" eventType="touchUpInside" id="CYs-KF-4Wx"/>
-                                                <action selector="applyButton:" destination="drE-1t-dmU" eventType="touchUpInside" id="WdZ-bb-pxK"/>
                                                 <segue destination="nPR-ec-dbB" kind="presentation" id="3ot-Vs-32j"/>
                                             </connections>
                                         </button>
@@ -630,9 +631,9 @@ You can also post jobs to recruit for.</string>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descriptionLabel" destination="dty-G1-iFq" id="nLw-TV-fhY"/>
-                                    <outlet property="technologyLabel" destination="xgm-7b-1EE" id="nmC-VR-XBq"/>
-                                    <outlet property="titleLabel" destination="SEL-or-Xix" id="Joy-3j-vNe"/>
+                                    <outlet property="descriptionLabel" destination="dty-G1-iFq" id="ITE-H2-86D"/>
+                                    <outlet property="technologyLabel" destination="xgm-7b-1EE" id="c84-8u-sUj"/>
+                                    <outlet property="titleLabel" destination="SEL-or-Xix" id="5Uw-OJ-5b1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -710,20 +711,15 @@ You can also post jobs to recruit for.</string>
                         <viewLayoutGuide key="safeArea" id="p9E-N4-HvR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="3aZ-Xy-YmE" appends="YES" id="IYO-BG-NZs"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="HWI-dm-3XR"/>
                     <connections>
                         <outlet property="coverTextView" destination="sif-NJ-UEq" id="vAO-wB-QyN"/>
                         <outlet property="navBar" destination="bap-Ur-AkE" id="8zA-jf-FMC"/>
                         <outlet property="navTitle" destination="uRn-Ne-bjb" id="Gzr-ZM-nd1"/>
-                        <outlet property="tapGest" destination="3aZ-Xy-YmE" id="XiO-q6-gct"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXV-Em-WyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="3aZ-Xy-YmE"/>
             </objects>
             <point key="canvasLocation" x="5657.971014492754" y="1585.7142857142856"/>
         </scene>

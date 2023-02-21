@@ -17,11 +17,14 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var genderSwitch: UISegmentedControl!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var passwordMatchLabel: UILabel!
+    @IBOutlet var taaap: UITapGestureRecognizer!
     @IBOutlet weak var trackPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
         // Set the delegate and data source for trackPicker to the delegate and data source of this view controller
         trackPicker.delegate = self
         trackPicker.dataSource = self
@@ -56,7 +59,10 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return jobObjc.tracksList[row]
     }
-    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     // This will execute whenever there are any touches on the whole screen (essentially always executing and checking for fields)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         

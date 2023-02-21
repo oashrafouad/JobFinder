@@ -15,6 +15,7 @@ class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, U
     @IBOutlet weak var postJobButton: UIButton!
     @IBOutlet var tapGes: UITapGestureRecognizer!
     @IBOutlet weak var trackPicker: UIPickerView!
+    
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
@@ -99,7 +100,7 @@ class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, U
             textField.layer.cornerRadius = 5
         }
     }
-
+    
     // For the description text view
     func textViewDidChange(_ textView: UITextView) {
         if (textView.hasText)
