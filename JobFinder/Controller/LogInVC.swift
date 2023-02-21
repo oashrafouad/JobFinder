@@ -45,6 +45,7 @@ class LogInVC: UIViewController {
         {
             logInCheckLabel.isHidden = false
         }
+        
     }
     
     // This will execute whenever there are any touches on the whole screen (essentially always executing and checking for fields)

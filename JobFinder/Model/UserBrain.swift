@@ -9,10 +9,11 @@ import Foundation
 
 class UserBrain
 {
-    var usersList : [User] = [
-    User(fullName: "Omar Ashraf", gender: "Male", company: "ITI", track: "iOS", email: "oashrafouad@gmail.com", password: "omar"),
-    User(fullName: "Tadros Nasr", gender: "Male", company: "ITI", track: "Java", email: "tadrosnasr@gmail.com", password: "tadros"),
-    User(fullName: "Saeed Hassan", gender: "Male", company: "ITI", track: "Android", email: "saeedhassan@gmail.com", password: "saeed"),
+    
+    var usersList = [
+        User(fullName: "Omar Ashraf", gender: "Male", company: "ITI", track: "Mobile Development", email: "oashrafouad@gmail.com", password: "omar"),
+        User(fullName: "Tadros Nasr", gender: "Male", company: "ITI", track: "IT", email: "tadrosnasr@gmail.com", password: "tadros"),
+        User(fullName: "Saeed Hassan", gender: "Male", company: "ITI", track: "UX/UI Design", email: "saeedhassan@gmail.com", password: "saeed")
     ]
     
     func addUser(fullName: String, gender: String, company: String, track: String, email: String, password: String)
@@ -47,17 +48,6 @@ class UserBrain
         // We are accessing the array at index 0 only because if it holds more than one value then it means duplicates are found. Our app can't handle duplicates for now so we only get the values at index 0
         currentUser = User(fullName: users[0].fullName, gender: users[0].gender, company: users[0].company, track: users[0].track, email: users[0].email, password: users[0].password)
     }
-    
-    func getJobsInCurrentUserTrack() -> [Job]
-    {
-        var currentTrack = currentUser?.track
-        
-        // This is a closure that searches through usersList and returns an array of Job objects that have the same track as the track of the current user. $0 is shorthand for the first (and only) argument passed to the closure, which is jobObjc
-        var jobs = jobObjc.jobsList.filter({$0.track == currentTrack})
-        
-        return jobs
-    }
-    
 }
 
 var userObjc = UserBrain()

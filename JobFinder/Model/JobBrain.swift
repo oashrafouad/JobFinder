@@ -9,6 +9,7 @@ import Foundation
 
 class JobBrain
 {
+    
     var jobsList = [
         Job(title: "iOS Software Engineer", description: "We are looking for an experienced iOS Software Engineer to join our team. You will be working with a team of experienced engineers to develop and implement our mobile applications.", track: "Mobile Development", company: "ABC Corporation"),
         
@@ -22,25 +23,20 @@ class JobBrain
     // List of tracks available to choose from in Register and Post Job screens
     var tracksList = ["Mobile Development", "Web Development", "Machine Learning", "UX/UI Design", "Game Development", "Data Analysis", "IT"]
     
-    // Index of Job object in jobsList array
-    var jobNumber = 0
-    
     // Get the Job object at from array at index jobNumber
-    func getJob() -> Job
+    func getJobAtIndex(index: Int) -> Job
     {
-        var currentJob = jobObjc.jobsList[jobNumber]
+        return jobObjc.jobsList[index]
+    }
+    
+    func getJobsInCurrentUserTrack() -> [Job]
+    {
+        var currentTrack = currentUser!.track
         
-        // Iterate through the array
-        if (jobObjc.jobNumber < jobObjc.jobsList.count - 1)
-        {
-            jobObjc.jobNumber += 1
-        }
-        else
-        {
-            jobObjc.jobNumber = 0
-        }
-
-        return currentJob
+        // This is a closure that searches through usersList and returns an array of Job objects that have the same track as the track of the current user. $0 is shorthand for the first (and only) argument passed to the closure, which is jobObjc
+        var jobs = jobObjc.jobsList.filter({$0.track == currentTrack})
+        print(currentUser!)
+        return jobs
     }
     
     // Add new Job object to jobsList array
@@ -50,7 +46,6 @@ class JobBrain
         print(jobObjc.jobsList)
         print("\n")
     }
-    
 }
 
 var jobObjc = JobBrain()

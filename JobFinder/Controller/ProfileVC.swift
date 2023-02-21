@@ -26,6 +26,9 @@ class ProfileVC: UIViewController {
         emailLabel.text = currentUser?.email
         trackLabel.text = currentUser?.track
         
+        trackLabel.sizeToFit()
+        trackView.sizeToFit()
+        
     }
     
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
