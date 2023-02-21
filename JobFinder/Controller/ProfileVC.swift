@@ -9,16 +9,11 @@ import UIKit
 
 class ProfileVC: UIViewController {
     
-    @IBOutlet weak var trackView: UIView!
     
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var trackLabel: UILabel!
     
-    override func viewDidLoad() {
-        // Modify the cornerRadius at runtime as it's not possible from storyboard
-        trackView.layer.cornerRadius = 10
-    }
     
     // Fill the view labels with the currently logged in user's data
     override func viewWillAppear(_ animated: Bool) {
@@ -27,7 +22,7 @@ class ProfileVC: UIViewController {
         trackLabel.text = currentUser?.track
         
         trackLabel.sizeToFit()
-        trackView.sizeToFit()
+        
         
     }
     

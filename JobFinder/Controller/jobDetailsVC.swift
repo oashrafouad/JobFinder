@@ -20,6 +20,10 @@ class jobDetailsVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        descriptionLabel.sizeToFit()
+    }
+    
     @IBAction func applyButton(_ sender: UIButton) {
         self.navigationController?.dismiss(animated: true)
     }

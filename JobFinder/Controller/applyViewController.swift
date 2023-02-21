@@ -20,11 +20,13 @@ class applyViewController: UIViewController {
         coverTextView.layer.borderWidth = 1.0
         coverTextView.layer.cornerRadius = 5
         
-        navTitle.title = "Test"
-        
-        let vc = storyboard?.instantiateViewController(identifier: "jobDetailsVC") as! jobDetailsVC
-        navTitle.title = vc.title
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navTitle.title = "Apply"
+
+    }
+    
      @IBAction func confirmButton(_ sender: UIButton) {
          
      }

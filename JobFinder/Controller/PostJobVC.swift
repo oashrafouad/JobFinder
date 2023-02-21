@@ -15,6 +15,7 @@ class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, U
     @IBOutlet weak var postJobButton: UIButton!
     @IBOutlet var tapGes: UITapGestureRecognizer!
     @IBOutlet weak var trackPicker: UIPickerView!
+    @IBOutlet weak var jobPostedLabel: UILabel!
     
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -82,6 +83,10 @@ class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, U
         var track = jobObjc.tracksList[trackPicker.selectedRow(inComponent: 0)]
         
         jobObjc.addJob(title: title, description: description, track: track, company: company)
+        
+        jobsOfCurrentUser = jobObjc.getJobsInCurrentUserTrack()
+        
+        jobPostedLabel.isHidden = false
         
     }
     
