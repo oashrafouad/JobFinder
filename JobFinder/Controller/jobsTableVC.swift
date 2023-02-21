@@ -12,7 +12,7 @@ class JobsTableVC: UITableViewController {
     
     var detailVC : jobDetailsVC!
     var jobs : [Job]!
-
+    var k : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         
