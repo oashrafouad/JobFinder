@@ -96,9 +96,8 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         var track = jobObjc.tracksList[trackPicker.selectedRow(inComponent: 0)]
         
         userObjc.addUser(fullName: fullName, gender: gender, company: company, track: track, email: email, password: password)
-        
+        self.navigationController?.pushViewController(tab!, animated: true)
         userObjc.assignCurrentUser(email: emailTextField.text!, password: passwordTextField.text!)
-        tab?.navigationController?.pushViewController(tab!, animated: true)
     }
     @objc func textFieldDidChange(_ textField: UITextField) {
         if (textField.hasText)
