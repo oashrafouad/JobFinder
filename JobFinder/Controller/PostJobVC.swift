@@ -13,10 +13,17 @@ class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, U
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var companyTextField: UITextField!
     @IBOutlet weak var postJobButton: UIButton!
+    @IBOutlet var tapGes: UITapGestureRecognizer!
     @IBOutlet weak var trackPicker: UIPickerView!
-    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         descriptionTextView.delegate = self
         

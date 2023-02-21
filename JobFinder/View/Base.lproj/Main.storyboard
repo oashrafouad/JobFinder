@@ -202,6 +202,10 @@ You can also post jobs to recruit for.</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fT9-5F-Oqd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="TMm-A6-zFX" appends="YES" id="GHJ-AL-aew"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="LJ5-kN-dCi"/>
                     <connections>
@@ -217,6 +221,7 @@ You can also post jobs to recruit for.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asl-dL-63E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TMm-A6-zFX"/>
             </objects>
             <point key="canvasLocation" x="2485.507246376812" y="880.58035714285711"/>
         </scene>
@@ -282,6 +287,10 @@ You can also post jobs to recruit for.</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y7o-ZI-Lg2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bya-cb-6bn" appends="YES" id="bdF-UK-UOo"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="aYa-Oe-2Fz"/>
                     <connections>
@@ -289,9 +298,11 @@ You can also post jobs to recruit for.</string>
                         <outlet property="logInButton" destination="8R4-HE-ZIh" id="fHE-Kn-z6P"/>
                         <outlet property="logInCheckLabel" destination="qeW-op-oPv" id="S21-pW-LE5"/>
                         <outlet property="passwordTextField" destination="3Jh-nU-gKN" id="iuA-as-GM7"/>
+                        <outlet property="touchRecognizer" destination="bya-cb-6bn" id="SD4-4D-8lU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12A-xI-2ak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bya-cb-6bn"/>
             </objects>
             <point key="canvasLocation" x="1428.985507246377" y="880.58035714285711"/>
         </scene>
@@ -377,6 +388,10 @@ You can also post jobs to recruit for.</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CvF-yd-n0Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sCu-eL-EcY" appends="YES" id="pco-5O-6Yt"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Post Job" image="doc.fill.badge.plus" catalog="system" id="loq-Kg-QDt"/>
                     <connections>
@@ -384,10 +399,12 @@ You can also post jobs to recruit for.</string>
                         <outlet property="descriptionTextView" destination="HiT-aO-Ze6" id="uTn-kT-90a"/>
                         <outlet property="jobTitleTextField" destination="u2q-sc-xya" id="kIE-Wx-2N6"/>
                         <outlet property="postJobButton" destination="joj-Su-6qm" id="rA0-5F-N0p"/>
+                        <outlet property="tapGes" destination="sCu-eL-EcY" id="s6Q-95-Yje"/>
                         <outlet property="trackPicker" destination="lvT-b8-n08" id="ryJ-Qw-MsK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6i-KA-zWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sCu-eL-EcY"/>
             </objects>
             <point key="canvasLocation" x="5657.971014492754" y="880.58035714285711"/>
         </scene>
@@ -455,11 +472,13 @@ You can also post jobs to recruit for.</string>
                         <outlet property="descripeLabel" destination="1tg-aK-ZZe" id="tqg-eJ-78T"/>
                         <outlet property="navBar" destination="sOU-9k-3m6" id="nhH-ck-hRD"/>
                         <outlet property="navBarTitle" destination="hA2-0Y-Jly" id="Qlm-fn-j8k"/>
+                        <outlet property="tapGesture" destination="uFw-cW-l0C" id="uXc-a9-tYM"/>
                         <outlet property="titleLabel" destination="uJP-Xo-1ib" id="hUv-OT-V0b"/>
                         <outlet property="trackLabel" destination="f3P-OH-Y72" id="BQA-hg-Ooi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Lm-1E-Nc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uFw-cW-l0C"/>
             </objects>
             <point key="canvasLocation" x="4818.840579710145" y="1586.3839285714284"/>
         </scene>
@@ -690,15 +709,21 @@ You can also post jobs to recruit for.</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p9E-N4-HvR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3aZ-Xy-YmE" appends="YES" id="IYO-BG-NZs"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="HWI-dm-3XR"/>
                     <connections>
                         <outlet property="coverTextView" destination="sif-NJ-UEq" id="vAO-wB-QyN"/>
                         <outlet property="navBar" destination="bap-Ur-AkE" id="8zA-jf-FMC"/>
                         <outlet property="navTitle" destination="uRn-Ne-bjb" id="Gzr-ZM-nd1"/>
+                        <outlet property="tapGest" destination="3aZ-Xy-YmE" id="XiO-q6-gct"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXV-Em-WyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3aZ-Xy-YmE"/>
             </objects>
             <point key="canvasLocation" x="5657.971014492754" y="1585.7142857142856"/>
         </scene>
