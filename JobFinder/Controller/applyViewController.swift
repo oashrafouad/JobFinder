@@ -28,6 +28,7 @@ class applyViewController: UIViewController {
     }
     
      @IBAction func confirmButton(_ sender: UIButton) {
+         self.navigationController?.popViewController(animated: true)
          
      }
 
