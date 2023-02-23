@@ -17,6 +17,7 @@ class LogInVC: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        // To dismiss keyboard
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // These functions will execute whenever any of the text fields have their text edited
