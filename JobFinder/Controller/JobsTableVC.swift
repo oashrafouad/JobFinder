@@ -8,7 +8,6 @@
 import UIKit
 
 class JobsTableVC: UITableViewController {
-    // Initialize an object of the struct to be able to call functions on it
     
     var detailVC : jobDetailsVC!
 
