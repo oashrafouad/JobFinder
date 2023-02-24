@@ -30,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070BB5DF29A8DE94006A62BB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0737401C2999900D004F1FBF /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		0737401E29999208004F1FBF /* JobBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobBrain.swift; sourceTree = "<group>"; };
 		073EC56C29A533ED00EAEFAD /* JobsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableVC.swift; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		07DBC02E2996950A00B42394 = {
 			isa = PBXGroup;
 			children = (
+				070BB5DF29A8DE94006A62BB /* README.md */,
 				07DBC0392996950A00B42394 /* JobFinder */,
 				07DBC0382996950A00B42394 /* Products */,
 			);
