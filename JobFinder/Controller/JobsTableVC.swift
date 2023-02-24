@@ -11,14 +11,13 @@ class JobsTableVC: UITableViewController {
     // Initialize an object of the struct to be able to call functions on it
     
     var detailVC : jobDetailsVC!
-    var jobs : [Job]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         detailVC = storyboard?.instantiateViewController(identifier: "jobDetailsVC") as? jobDetailsVC
         
-        jobs = jobObjc.getJobsInCurrentUserTrack()
+        jobsOfCurrentUser = jobObjc.getJobsInCurrentUserTrack()
         
     }
     
@@ -34,12 +33,12 @@ class JobsTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //number of row = nu,ber of job's array elements
         
-        return jobs.count
+        return jobsOfCurrentUser.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 230
+        return 170
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -51,9 +50,9 @@ class JobsTableVC: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? JobTableViewCell
         
-        cell!.titleLabel?.text = jobs[indexPath.row].title
-        cell!.descriptionLabel?.text = jobs[indexPath.row].description
-        cell!.technologyLabel?.text = jobs[indexPath.row].track
+        cell!.titleLabel?.text = jobsOfCurrentUser[indexPath.row].title
+        cell!.descriptionLabel?.text = jobsOfCurrentUser[indexPath.row].description
+        cell!.technologyLabel?.text = jobsOfCurrentUser[indexPath.row].track
         
         return cell!
     }
@@ -66,14 +65,10 @@ class JobsTableVC: UITableViewController {
         
         //var job = jobObjc.getJobAtIndex(index: indexPath.row)
         
-        detailVC.navBarTitle.title = jobs[indexPath.row].title
-        detailVC.titleLabel.text = jobs[indexPath.row].title + " |"
-        detailVC.companyLabel.text = jobs[indexPath.row].company
-        detailVC.trackLabel.text = jobs[indexPath.row].track
-        detailVC.descriptionLabel.text = jobs[indexPath.row].description
-    }
-    
-    @IBAction func applyButton(_ sender: UIButton) {
-        print("Pressed!")
+        detailVC.navBarTitle.title = jobsOfCurrentUser[indexPath.row].title
+        detailVC.titleLabel.text = jobsOfCurrentUser[indexPath.row].title + " |"
+        detailVC.companyLabel.text = jobsOfCurrentUser[indexPath.row].company
+        detailVC.trackLabel.text = jobsOfCurrentUser[indexPath.row].track
+        detailVC.descriptionLabel.text = jobsOfCurrentUser[indexPath.row].description
     }
 }
