@@ -25,7 +25,7 @@ class UserBrain
     func isUserFound(email: String, password: String) -> Bool
     {
         // This is a closure that searches through usersList and returns an array of User objects that have the same entered email and password. $0 is shorthand for the first (and only) argument passed to the closure, which is userObjc
-        var foundUsers = userObjc.usersList.filter({$0.email == email && $0.password == password})
+        let foundUsers = userObjc.usersList.filter({$0.email == email && $0.password == password})
         
         // If the array is empty, then no users exist with the entered credentials
         if foundUsers.isEmpty
@@ -43,7 +43,7 @@ class UserBrain
     {
         
         // This is a closure that searches through usersList and returns an array of User objects that have the same entered email and password. $0 is shorthand for the first (and only) argument passed to the closure, which is userObjc
-        var users = userObjc.usersList.filter({$0.email == email && $0.password == password})
+        let users = userObjc.usersList.filter({$0.email == email && $0.password == password})
         
         // We are accessing the array at index 0 only because if it holds more than one value then it means duplicates are found. Our app can't handle duplicates for now so we only get the values at index 0
         currentUser = User(fullName: users[0].fullName, gender: users[0].gender, company: users[0].company, track: users[0].track, email: users[0].email, password: users[0].password)
