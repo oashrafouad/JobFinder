@@ -12,6 +12,7 @@ class JobTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        print("test")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
