@@ -16,10 +16,6 @@ class jobDetailsVC: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var navBar: UINavigationBar!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         descriptionLabel.sizeToFit()
     }

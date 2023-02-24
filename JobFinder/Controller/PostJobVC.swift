@@ -18,9 +18,10 @@ class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, U
     @IBOutlet weak var jobPostedLabel: UILabel!
     
     @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        // Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,7 +42,6 @@ class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, U
         // These functions will execute whenever any of the text fields or text views have their text edited
         jobTitleTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         companyTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        
     }
     
     // These 3 functions are for trackPicker
@@ -75,12 +75,12 @@ class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, U
     
     @IBAction func postJobButtonPressed(_ sender: UIButton) {
 
-        var title = jobTitleTextField.text!
-        var description = descriptionTextView.text!
-        var company = companyTextField.text!
+        let title = jobTitleTextField.text!
+        let description = descriptionTextView.text!
+        let company = companyTextField.text!
 
         // Checks the index of the selected row in the component which has index 0 (e.g. the only component), then gets the track at this index in tracksList array. The values in trackPicker are presented in the same order as the trackList array, so they have the same indexes
-        var track = jobObjc.tracksList[trackPicker.selectedRow(inComponent: 0)]
+        let track = jobObjc.tracksList[trackPicker.selectedRow(inComponent: 0)]
         
         jobObjc.addJob(title: title, description: description, track: track, company: company)
         

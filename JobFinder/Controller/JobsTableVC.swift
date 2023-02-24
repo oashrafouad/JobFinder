@@ -57,13 +57,11 @@ class JobsTableVC: UITableViewController {
         return cell!
     }
     
-    //function to make changes when select a cell from the table
+    // Function to make changes when select a cell from the table
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // navigate each cell to its info in jobDetailsVC
         
+        // Navigate each cell to its info in jobDetailsVC
         self.navigationController?.present(detailVC, animated: true)
-        
-        //var job = jobObjc.getJobAtIndex(index: indexPath.row)
         
         detailVC.navBarTitle.title = jobsOfCurrentUser[indexPath.row].title
         detailVC.titleLabel.text = jobsOfCurrentUser[indexPath.row].title + " |"

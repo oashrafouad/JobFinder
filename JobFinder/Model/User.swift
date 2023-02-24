@@ -9,11 +9,10 @@ import Foundation
 
 struct User
 {
-    var fullName: String
-    var gender: String
-    var company: String
-    var track: String
-    var email: String
-    var password: String
-    
+    let fullName: String
+    let gender: String
+    let company: String
+    let track: String
+    let email: String
+    let password: String
 }

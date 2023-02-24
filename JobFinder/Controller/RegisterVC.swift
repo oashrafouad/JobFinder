@@ -22,6 +22,7 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
 
@@ -59,10 +60,13 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return jobObjc.tracksList[row]
     }
+    
     @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        
+        // Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
+    
     // This will execute whenever there are any touches on the whole screen (essentially always executing and checking for fields)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -84,27 +88,25 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         }
     }
     
-    @IBAction func genderSwitchPressed(_ sender: UISegmentedControl) {
-        
-    }
-    
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         
-        var fullName = fullNameTextField.text!
-        var email = emailTextField.text!
-        var password = passwordTextField.text!
-        var company = companyTextField.text!
+        let fullName = fullNameTextField.text!
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        let company = companyTextField.text!
         let tab = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
+        
         // Checks the index of the selected segment, then gets the title of the selected segment accordingly (Male: 0, Female: 1)
-        var gender = genderSwitch.titleForSegment(at: genderSwitch.selectedSegmentIndex)!
+        let gender = genderSwitch.titleForSegment(at: genderSwitch.selectedSegmentIndex)!
         
         // Checks the index of the selected row in the component which has index 0 (e.g. the only component), then gets the track at this index in tracksList array. The values in trackPicker are presented in the same order as the trackList array, so they have the same indexes
-        var track = jobObjc.tracksList[trackPicker.selectedRow(inComponent: 0)]
+        let track = jobObjc.tracksList[trackPicker.selectedRow(inComponent: 0)]
         
         userObjc.addUser(fullName: fullName, gender: gender, company: company, track: track, email: email, password: password)
         self.navigationController?.pushViewController(tab!, animated: true)
         userObjc.assignCurrentUser(email: emailTextField.text!, password: passwordTextField.text!)
     }
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
         if (textField.hasText)
         {

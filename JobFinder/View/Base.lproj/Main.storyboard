@@ -166,9 +166,6 @@ You can also post jobs to recruit for.</string>
                                     <segment title="Female"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.40000000000000002" green="0.6588235294117647" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="genderSwitchPressed:" destination="nNy-UL-I48" eventType="valueChanged" id="q5s-fK-8Q2"/>
-                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCg-6A-Qmz">
                                 <rect key="frame" x="83" y="795" width="249" height="54"/>
@@ -196,7 +193,7 @@ You can also post jobs to recruit for.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-D5-VtC">
-                                <rect key="frame" x="27" y="416" width="353" height="84"/>
+                                <rect key="frame" x="27" y="416" width="352" height="84"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
@@ -473,7 +470,6 @@ You can also post jobs to recruit for.</string>
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="applyButton:" destination="2UI-qp-zcw" eventType="touchUpInside" id="jpT-3Z-CXe"/>
                                     <segue destination="nPR-ec-dbB" kind="presentation" id="9Vb-XM-nkv"/>
                                 </connections>
                             </button>
@@ -682,7 +678,7 @@ You can also post jobs to recruit for.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bap-Ur-AkE">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="-1" y="0.0" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" systemColor="systemBlueColor"/>
                                 <textAttributes key="titleTextAttributes">
@@ -722,7 +718,7 @@ You can also post jobs to recruit for.</string>
                         <outlet property="coverTextView" destination="sif-NJ-UEq" id="vAO-wB-QyN"/>
                         <outlet property="navBar" destination="bap-Ur-AkE" id="8zA-jf-FMC"/>
                         <outlet property="navTitle" destination="uRn-Ne-bjb" id="Gzr-ZM-nd1"/>
-                        <outlet property="sucessfulLabel" destination="Xb5-Ys-b3l" id="ZpM-yW-geS"/>
+                        <outlet property="successfulLabel" destination="Xb5-Ys-b3l" id="erR-rL-Ugc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXV-Em-WyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

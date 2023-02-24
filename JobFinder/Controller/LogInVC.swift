@@ -17,23 +17,30 @@ class LogInVC: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // To dismiss keyboard
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
         // These functions will execute whenever any of the text fields have their text edited
         emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
     }
+    
     @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        
+        // Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
+    
     @IBAction func logInButtonPressed(_ sender: UIButton) {
         
         let Tab = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as? TabBarVC
-        var email = emailTextField.text!
-        var password = passwordTextField.text!
+        
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        
         // Check if a user exists with the entered credentials
         // We need to find a way to block the segue from happening if no user is found
         if(userObjc.isUserFound(email: email, password: password))

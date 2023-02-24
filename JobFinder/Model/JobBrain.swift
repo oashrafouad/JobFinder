@@ -25,7 +25,7 @@ class JobBrain
     ]
     
     // List of tracks available to choose from in Register and Post Job screens
-    var tracksList = ["Mobile Development", "Web Development", "Machine Learning", "UX/UI Design", "Game Development", "Data Analysis", "IT"]
+    let tracksList = ["Mobile Development", "Web Development", "Machine Learning", "UX/UI Design", "Game Development", "Data Analysis", "IT"]
     
     // Get the Job object at from array at index jobNumber
     func getJobAtIndex(index: Int) -> Job
@@ -35,10 +35,10 @@ class JobBrain
     
     func getJobsInCurrentUserTrack() -> [Job]
     {
-        var currentTrack = currentUser!.track
+        let currentTrack = currentUser!.track
         
         // This is a closure that searches through usersList and returns an array of Job objects that have the same track as the track of the current user. $0 is shorthand for the first (and only) argument passed to the closure, which is jobObjc
-        var jobs = jobObjc.jobsList.filter({$0.track == currentTrack})
+        let jobs = jobObjc.jobsList.filter({$0.track == currentTrack})
         return jobs
     }
     

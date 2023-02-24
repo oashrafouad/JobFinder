@@ -38,7 +38,7 @@ class UserBrain
         }
     }
     
-    // Make the user with these credentials
+    // Make the user with these credentials be the current user
     func assignCurrentUser(email: String, password: String)
     {
         
