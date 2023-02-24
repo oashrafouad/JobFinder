@@ -51,7 +51,7 @@ class JobsTableVC: UITableViewController {
         
         cell!.titleLabel?.text = jobsOfCurrentUser[indexPath.row].title
         cell!.descriptionLabel?.text = jobsOfCurrentUser[indexPath.row].description
-        cell!.technologyLabel?.text = jobsOfCurrentUser[indexPath.row].track
+        cell!.trackLabel?.text = jobsOfCurrentUser[indexPath.row].track
         
         return cell!
     }
