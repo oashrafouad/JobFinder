@@ -1,1 +1,1 @@
-This is a pretty simple app we created as a university project for finding jobs in the technical field. Users can select their track (Mobile Development, IT, etc.) and the app will display jobs specifically related to their chosen track.
+This is a pretty simple app we created as a university project for finding jobs in the technical field. Users can select their track (Mobile Development, IT, etc.) and the app will display jobs specifically related to their chosen track. Users can also post jobs that other users can view.
