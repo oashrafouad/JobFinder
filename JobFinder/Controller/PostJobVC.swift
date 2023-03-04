@@ -1,10 +1,3 @@
-//
-//  PostJobVC.swift
-//  JobFinder
-//
-//  Created by Omar Ashraf on 17/02/2023.
-//
-
 import UIKit
 
 class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
@@ -13,11 +6,11 @@ class PostJobVC: UIViewController, UITextViewDelegate, UIPickerViewDataSource, U
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var companyTextField: UITextField!
     @IBOutlet weak var postJobButton: UIButton!
-    @IBOutlet var tapGes: UITapGestureRecognizer!
     @IBOutlet weak var trackPicker: UIPickerView!
     @IBOutlet weak var jobPostedLabel: UILabel!
     
     @objc func dismissKeyboard() {
+        
         // Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }

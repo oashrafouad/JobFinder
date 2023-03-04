@@ -1,10 +1,3 @@
-//
-//  JobsList.swift
-//  JobFinder
-//
-//  Created by Omar Ashraf on 12/02/2023.
-//
-
 import Foundation
 
 class JobBrain
@@ -26,12 +19,6 @@ class JobBrain
     
     // List of tracks available to choose from in Register and Post Job screens
     let tracksList = ["Mobile Development", "Web Development", "Machine Learning", "UX/UI Design", "Game Development", "Data Analysis", "IT"]
-    
-    // Get the Job object at from array at index jobNumber
-    func getJobAtIndex(index: Int) -> Job
-    {
-        return jobObjc.jobsList[index]
-    }
     
     func getJobsInCurrentUserTrack() -> [Job]
     {

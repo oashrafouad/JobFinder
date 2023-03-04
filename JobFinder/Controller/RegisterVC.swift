@@ -1,10 +1,3 @@
-//
-//  RegisterVC.swift
-//  JobFinder
-//
-//  Created by Omar Ashraf on 18/02/2023.
-//
-
 import UIKit
 
 class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
@@ -17,7 +10,6 @@ class RegisterVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var genderSwitch: UISegmentedControl!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var passwordMatchLabel: UILabel!
-    @IBOutlet var taaap: UITapGestureRecognizer!
     @IBOutlet weak var trackPicker: UIPickerView!
     
     override func viewDidLoad() {

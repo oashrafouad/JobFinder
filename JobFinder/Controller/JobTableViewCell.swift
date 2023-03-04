@@ -1,10 +1,3 @@
-//
-//  jobTableViewCell.swift
-//  JobFinder
-//
-//  Created by Tadros Nasr on 16/02/2023.
-//
-
 import UIKit
 
 class JobTableViewCell: UITableViewCell {

@@ -1,10 +1,3 @@
-//
-//  LogInVC.swift
-//  JobFinder
-//
-//  Created by Omar Ashraf on 17/02/2023.
-//
-
 import UIKit
 
 class LogInVC: UIViewController {
@@ -13,7 +6,6 @@ class LogInVC: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var logInCheckLabel: UILabel!
-    @IBOutlet var touchRecognizer: UITapGestureRecognizer!
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +34,8 @@ class LogInVC: UIViewController {
         let password = passwordTextField.text!
         
         // Check if a user exists with the entered credentials
-        // We need to find a way to block the segue from happening if no user is found
         if(userObjc.isUserFound(email: email, password: password))
         {
-            logInCheckLabel.isHidden = true
             userObjc.assignCurrentUser(email: email, password: password)
             self.navigationController?.pushViewController(Tab!, animated: true)
         }

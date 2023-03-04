@@ -1,10 +1,3 @@
-//
-//  UserBrain.swift
-//  JobFinder
-//
-//  Created by Omar Ashraf on 18/02/2023.
-//
-
 import Foundation
 
 class UserBrain
@@ -19,7 +12,6 @@ class UserBrain
     func addUser(fullName: String, gender: String, company: String, track: String, email: String, password: String)
     {
         userObjc.usersList.append(User(fullName: fullName, gender: gender, company: company, track: track, email: email, password: password))
-        print(userObjc.usersList)
     }
     
     func isUserFound(email: String, password: String) -> Bool

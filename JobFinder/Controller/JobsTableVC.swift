@@ -1,10 +1,3 @@
-//
-//  TableViewController.swift
-//  JobFinder
-//
-//  Created by Tadros Nasr on 16/02/2023.
-//
-
 import UIKit
 
 class JobsTableVC: UITableViewController {
@@ -21,6 +14,8 @@ class JobsTableVC: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        // Refresh the table view each time this view appears to reflect a posted job
         self.tableView.reloadData()
     }
     
