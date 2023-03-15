@@ -10,11 +10,21 @@ class applyViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // To dismiss keyboard
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         coverTextView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         coverTextView.layer.borderWidth = 1.0
         coverTextView.layer.cornerRadius = 5
         
         coverTextView.delegate = self
+    }
+    
+    @objc func dismissKeyboard() {
+        
+        // Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,5 +61,4 @@ class applyViewController: UIViewController, UITextViewDelegate {
             textView.layer.borderWidth = 1
         }
     }
-    
 }
