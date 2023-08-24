@@ -1,6 +1,6 @@
 This is a really simple app we created as a university project for finding jobs in the technical field. Users can select their track (Mobile Development, IT, etc.) and the app will display jobs specifically related to their chosen track. Users can also post jobs that other users can view.
 
-**Note:** This app operates locally, not on the cloud.
+**Note:** User credentials and job details are stored locally, not on the cloud.
 
 | Welcome screen | Jobs screen | Post Job screen |
 | --- | --- | --- |
